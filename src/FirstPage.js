@@ -31,7 +31,7 @@ function FirstPage() {
                     {/* <img src="https://doodleipsum.com/700/hand-drawn?i=a96b513e1e4deb10b96d2d852ebd824e" /> */}
 
                     {/* static folder link */}
-                    <img id="vectorart" src="static/images/finalvectorart.png" />
+                    <img id="vectorart" src="static/images/finalvectorart.png" alt=""/>
                     {/* static folder link */}
                 </div>
             </div>
