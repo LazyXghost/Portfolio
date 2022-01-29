@@ -85,3 +85,6 @@ span{
     width: 50vw;
     padding-top: 100px;
 }
+#firstPageTopHalf{
+    display: flex;
+}

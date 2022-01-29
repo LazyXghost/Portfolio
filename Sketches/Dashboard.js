@@ -3,10 +3,10 @@ var Engine = Matter.Engine,
     Render = Matter.Render,
     Runner = Matter.Runner,
     Body = Matter.Body,
-    Constraint = Matter.Constraint,
     Composite = Matter.Composite,
-    MouseConstraint = Matter.MouseConstraint,
-    Mouse = Matter.Mouse,
+    // Constraint = Matter.Constraint,
+    // MouseConstraint = Matter.MouseConstraint,
+    // Mouse = Matter.Mouse,
     Bodies = Matter.Bodies;
 
 const scrollBarWidth = 15,
@@ -16,53 +16,46 @@ const scrollBarWidth = 15,
     canvasWidth = 600,
     groundWidth = 10;
 
-// create an engine
-var engine = Engine.create(),
-    world = engine.world;
+function doAnimations(element, option, bodies, gravity = 1) {
+    var element = document.querySelector(element),
+        engine = Engine.create();
+    engine.world.gravity.y = gravity;
+    var canvas = Render.create({
+        element: element,
+        engine: engine,
+        options: {
+            height: option[0],
+            width: option[1],
+            wireframes: option[2],
+            background: option[3]
+        }
+    });
+    Render.run(canvas);
 
-// create a renderer
-// var render2 = Render.create({
-//     element: document.body,
-//     engine: engine,
-//     options: {
-//         height: window.innerHeight - 700,
-//         width: 60,
-//         // wireframes: false,
-//         // background: 'black'
-//     }
-// });
+    var runner = Runner.create();
+    Runner.run(runner, engine);
+    Composite.add(engine.world, bodies);
+}
 
-var render = Render.create({
-    element: document.body,
-    engine: engine,
-    options: {
-        height: canvasHeight,
-        width: window.innerWidth - scrollBarWidth,
-        wireframes: false,
-        background: 'black'
+
+var onceclicked = false;
+$('#Pipe').click(function () {
+    if (!onceclicked) {
+        var options = [223, 300, false, 'black'];
+        var ball = Bodies.circle(235, 20, 35, {
+            render: { fillStyle: 'red' },
+            friction: 0,
+        });
+
+        doAnimations('#ballEntryCanvas', options, [ball], 0.5);
     }
+    onceclicked = true;
 });
-// run the renderer
-Render.run(render);
 
-// create runner
-var runner = Runner.create();
-Runner.run(runner, engine);
-
-// create two boxes and a ground
-//                       (x, y, size, width)
-var ball = Bodies.circle(830, 0, 35, {
-    render: { fillStyle: 'red' },
-    friction: 0
-});
-var box = Bodies.rectangle(450, 50, 80, 80, {
+var options = [canvasHeight, window.innerWidth - scrollBarWidth, false, 'black'];
+var box = Bodies.rectangle(450, 0, 80, 80, {
     render: { fillStyle: 'blue' },
     restitution: bounciness
 });
-var ground = Bodies.rectangle(window.innerWidth / 2, canvasHeight, window.innerWidth, groundWidth, { isStatic: true });
-objects = [ball, box, ground];
-
-
-// add all of the bodies to the world
-Composite.add(engine.world, objects);
-
+var ground = Bodies.rectangle(window.innerWidth / 2, canvasHeight, window.innerWidth - scrollBarWidth, groundWidth, { isStatic: true });
+doAnimations('#mainCanvas', options, [box, ground], 1);

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  
+
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -8,10 +8,10 @@
     <script src="https://kit.fontawesome.com/ce5d419441.js" crossorigin="anonymous"></script>
     <title>Rajat Bansal | Portfolio</title>
     <link rel="stylesheet" href="style.css">
-
     <!--  Matterjs scripts -->
     <script src="libraries/matter.js"></script>
     <script src="libraries/matter.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   </head>
 
   <body>
@@ -38,12 +38,15 @@
       </div>
       <!-- -------------------------- -->
       <!-- --- First page content --- -->
-      <div id="Intro">
-        Hi. My name is Rajat Bansal and I am a second year student at IIT Mandi | CSE.
+      <div id="firstPageTopHalf">
+        <div id="Intro">
+          Hi. My name is Rajat Bansal and I am a second year student at IIT Mandi | CSE.
+        </div>
+        <div id="ballEntryCanvas"></div>
       </div>
-      <script src="Sketches/Dashboard.js"></script>
-      <!-- -------------------------- -->
     </div>
+    <div id="mainCanvas"></div>
+    <!-- -------------------------- -->
     <!-- ------------------------------------ -->
     <!-- ------------ SECOND PAGE ----------- -->
     <div class="page fullpage">
@@ -54,8 +57,8 @@
     </div>
     <!-- ------------------------------------ -->
   </body>
-
   <!-- Custom scripts -->
   <script src="index.js"></script>
+  <script src="Sketches/Dashboard.js"></script>
 
 </html>
