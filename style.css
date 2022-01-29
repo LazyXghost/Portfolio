@@ -23,8 +23,10 @@ a:hover{
     }
 }
 .page{
-    height: 100%;
     margin-left: 120px;
+}
+.fullpage{
+    height: 100%;
 }
 /* ------------------------------ */
 
@@ -55,7 +57,7 @@ a:hover{
     padding: 40px 40px 40px 0px;
 }
 #navbarlogo{
-    font-size: 40px;
+    font-size: 45px;
     color: white;
 }
 span{
@@ -78,15 +80,8 @@ span{
 }
 /* -------------------------- */
 
-
-
-#firstPageContent{
-    height: 85%;
-    font-size: 30px;
-    width: 400px;
-    padding-top: 35px;
+#Intro{
+    font-size: 37px;
+    width: 50vw;
+    padding-top: 100px;
 }
-#Hi{
-    font-size: 40px;
-}
-
