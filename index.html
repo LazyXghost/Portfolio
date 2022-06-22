@@ -4,63 +4,94 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- Font awesome script for getting icons -->
-    <script src="https://kit.fontawesome.com/ce5d419441.js" crossorigin="anonymous"></script>
-    <title>Rajat Bansal | Portfolio</title>
+    <title>Rajat Bansal</title>
     <link rel="stylesheet" href="style.css">
-    <!--  Matterjs scripts -->
-    <script src="libraries/matter.js"></script>
-    <script src="libraries/matter.min.js"></script>
+    <script src="https://kit.fontawesome.com/ce5d419441.js" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
   </head>
 
   <body>
     <!-- ---------- CONTACT LINKS ----------- -->
     <div id="contactlinks">
-      <a href=" Matter.Constraint,
-      // MouseConstraint = Matter.MouseConstraint,
-      // Mouse = Mattehttps://www.linkedin.com/in/rajat-bansal-a25b17218/"><i class="fab fa-linkedin contactlink"></i></a>
+      <a href="mailto:b20123@students.iitmandi.ac.in"><i class="fas fa-envelope contactlink" id="mailicon"></i></a>
+      <a href="https://www.linkedin.com/in/rajat-bansal-a25b17218/"><i class="fab fa-linkedin contactlink" id="linkedinicon"></i></a>
       <a href="https://github.com/lazyXghost"><i class="fab fa-github contactlink" id="githubicon"></i></a>
       <a href="https://www.instagram.com/lazyghost_2701/"><i class="fab fa-instagram contactlink" id="instagramicon"></i></a>
     </div>
     <!-- ------------------------------------ -->
     <!-- ------------- FIRST PAGE ------------- -->
-    <div class="page">
+    <div class="page fullPage" id="home">
       <!-- ------ Top header ------- -->
-      <div id="header">
+      <div class="header">
         <div id="navbar">
-          <div id="navbarlogo">Port<span id="navlogo">folio.</span></div>
+          <div id="navbarlogo">Lazy<span id="navlogo">X</span>ghost</div>
           <div id="navbarlinks">
-            <a class="navbarlink" href="#">Home</a>
-            <a class="navbarlink" href="#">About</a>
-            <a class="navbarlink" href="#">Contact</a>
+            <a class="navbarlink" href="#home">Home</a>
+            <a class="navbarlink" href="#about">About</a>
+            <a class="navbarlink" href="#projects">Projects</a>
           </div>
         </div>
-        <img src="images/Pipe.png" id="Pipe" alt="Pipe"></img>
       </div>
       <!-- -------------------------- -->
       <!-- --- First page content --- -->
-      <div id="firstPageTopHalf">
-        <div id="Intro">
-          Hi. My name is Rajat Bansal and I am a second year student at IIT Mandi | CSE.
+      <div id="Intro">
+        <div id="IntroTitle">
+          Hello<grey>.</grey>
         </div>
-        <div id="ballEntryCanvas"></div>
+        <div id="MainIntro">
+          My name is Rajat Bansal. I am a <underline>Programmer and a Web Developer</underline> and here's my Portfolio. Have a look.
+        </div>
       </div>
+      <img src="images/MyImage.jpg" id="MyImage">
     </div>
-    <div id="mainCanvas"></div>
     <!-- -------------------------- -->
     <!-- ------------------------------------ -->
     <!-- ------------ SECOND PAGE ----------- -->
-    <div class="page fullpage">
-      Lo, reitia dignissimos deleniti iusto unde distinctio adipisci quam.
-      Praesentium doloremque tempore accusamus illo beatae. Laudantium quam deserunt sit optio asperiores eaque sequi.
-      Architecto quod sit doloremque molestias cumque? autem perspiciatis possimus cum harum provident temporibus
-      repudiandae dolorem mac quis nesciunt omnis pariatur, facilis qui. Quaerat?
+    <div class="page fullPage" id="about">
+      <div class="label aboutLabel">About</div>
+      <div id="aboutContent">
+        <div id="aboutContentTitle">About Me</div>
+        <div id="aboutContentMain">
+          <p>
+            I am Rajat Bansal, currently a 3<sup>rd</sup> year student at IIT Mandi pursuing B.Tech in computer science.
+            Personality wise i am an introvert and I am ready to make new friends, so don't hesitate to start a convo with me :). I like watching movies, animes and playing both video and physical games. I am also a manga reader.
+          </p>
+          <p>
+            In programming languages i know C++ and Python and basic Javascript.
+            I like doing competitive programming and my dream is to become a software development engineer.
+            I am a <underline><a href="https://codeforces.com/profile/Lazyghost">
+                <rank id="rank">Specialist</rank> on codeforces
+              </a></underline>. I am open to working on new projects as long as i get to learn something new.
+          </p>
+        </div>
+      </div>
     </div>
     <!-- ------------------------------------ -->
+    <!-- ------------ THIRD PAGE ----------- -->
+    <div class="page fullPage" id="projects">
+      <div class="label projectLabel">Projects</div>
+      <div id="projectContent">
+        <div id="projectContentMain">
+          <div class="card">
+            <div class="cardImage">
+              <img src="projectPortal.jpg" alt="">
+            </div>
+            <div class="cardContent">
+              <div class="cardContentTitle">
+                UGAC Project Portal
+              </div>
+              <div class="cardContentMain">
+                This is a project portal
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="projectToolsAndTechnologiesTitle">Tools And Technologies</div>
+      </div>
+    </div>
+    <!-- ------------------------------------ -->
+    <div class="footer page"> &copy 2022 Rajat Bansal</div>
   </body>
-  <!-- Custom scripts -->
   <script src="index.js"></script>
-  <script src="Sketches/Dashboard.js"></script>
 
 </html>

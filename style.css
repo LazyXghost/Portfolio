@@ -1,11 +1,13 @@
 /* --- GENERAL SITE SETTING --- */
 html,body{
+    z-index: 0;
     margin: 0px;
     font-family: 'Ubuntu';
     font-weight: 300;
     height: 100%;
     background-color: black;
     color: white;
+    scroll-behavior: smooth;
 }
 a{
     text-decoration: none;
@@ -23,24 +25,52 @@ a:hover{
     }
 }
 .page{
-    margin-left: 120px;
+    position: relative;
+    padding-left: 110px;
 }
-.fullpage{
+.fullPage{
     height: 100%;
+}
+span{
+    font-weight: 500;
+    color: rgb(24, 178, 224);
+}
+.white{
+    background-color: white;
+}
+grey{
+    color: grey;
+}
+underline{
+    text-decoration: underline;
+    text-decoration-color: grey;
+    font-weight: 600;
+}
+.label{
+    padding: 5px 15px 5px 5px;
+    position: absolute;
+    top: 45px;
+    font-size: 35px;
+    transform: rotate(270deg);
+    color: white;
 }
 /* ------------------------------ */
 
 /* ----- ICONS STYLING ------ */
 #contactlinks{
+    z-index: 1;
     font-size: 40px;
     position: fixed;
     top: 45px;
-    left: 20px;
+    left: 15px;
     width: 30px;
     height: 100%;
 }
 .contactlink{
     padding: 10px;
+}
+#mailicon{
+    font-size: 35px;
 }
 #githubicon{
     font-size: 35px;
@@ -48,7 +78,7 @@ a:hover{
 /* -------------------------- */
 
 /* ----- NAVBAR STYLING ----- */
-#header{
+.header{
     display: flex;
 }
 #navbar{
@@ -60,9 +90,6 @@ a:hover{
     font-size: 45px;
     color: white;
 }
-span{
-    font-weight: 500;
-}
 #navbarlinks{
     font-size: 20px;
     display: flex;
@@ -72,19 +99,71 @@ span{
 .navbarlink{
     margin-left: 30px;
 }
-#Pipe{
+/* #Pipe{
     height: 100px;
     transform: rotate(180deg);
     margin-left: auto;
     margin-right: 50px;
-}
+} */
 /* -------------------------- */
 
+/* -------- FIRST PAGE STYLING -------- */
 #Intro{
-    font-size: 37px;
+    padding-top: 150px;
+}
+#IntroTitle{
+    position:absolute;
+    left: 95px;
+    font-size: 200px;
+    font-weight: 800;
+    padding-left: 0px;
+}
+#MainIntro{
+    position:absolute;
+    color: rgb(194, 193, 193);
+    top: 500px;
+    font-size: 20px;
     width: 50vw;
-    padding-top: 100px;
 }
-#firstPageTopHalf{
-    display: flex;
+#MyImage{
+    top: 150px;
+    position: absolute;
+    width: 380px;
+    height: 650px;
+    left: 1000px;
 }
+/* ------------------------------------- */
+
+/* -------- SECOND PAGE STYLING -------- */
+.aboutLabel{
+    left: 60px;
+}
+#aboutContent{
+    margin-left: 80px;
+    margin-top: 80px;
+    padding: 80px 100px 80px 100px;
+    padding-right: 150px;
+    color: white;
+    border: solid 3px white;
+    border-right: 0px;
+}
+#aboutContentTitle{
+    font-size: 100px;
+}
+#aboutContentMain{
+    margin-top: 100px;
+    color: rgb(206, 206, 206);
+    font-size: 22px;
+}
+/* ------------------------------------- */
+
+/* -------- THIRD PAGE STYLING -------- */
+.projectLabel{
+    left: 45px;
+}
+#projectToolsAndTechnologiesTitle{
+    position: absolute;
+    left: 250px;
+    font-size: 50px;
+}
+/* ------------------------------------- */

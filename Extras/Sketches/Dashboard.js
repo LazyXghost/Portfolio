@@ -59,3 +59,11 @@ var box = Bodies.rectangle(450, 0, 80, 80, {
 });
 var ground = Bodies.rectangle(window.innerWidth / 2, canvasHeight, window.innerWidth - scrollBarWidth, groundWidth, { isStatic: true });
 doAnimations('#mainCanvas', options, [box, ground], 1);
+
+// IN HTML 
+// <script src="libraries/matter.js"></script>
+// <script src="libraries/matter.min.js"></script>
+// <script src="Sketches/Dashboard.js"></script>
+// <img src="Pipe.png" id="Pipe" alt="Pipe"></img>
+// <div id="mainCanvas"></div>
+// <div id="ballEntryCanvas"></div>
