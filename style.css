@@ -1,5 +1,6 @@
 /* --- GENERAL SITE SETTING --- */
-html,body{
+html,
+body {
     z-index: 0;
     margin: 0px;
     font-family: 'Ubuntu';
@@ -9,44 +10,55 @@ html,body{
     color: white;
     scroll-behavior: smooth;
 }
-a{
+
+a {
     text-decoration: none;
     color: white;
 }
-a:hover{
+
+a:hover {
     animation: colorchange 1.5s alternate-reverse;
 }
+
 @keyframes colorchange {
-    from{
+    from {
         color: white;
     }
-    to{
+
+    to {
         color: rgb(24, 178, 224);
     }
 }
-.page{
+
+.page {
     position: relative;
     padding-left: 110px;
 }
-.fullPage{
-    height: 100%;
+
+.fullPage {
+    min-height: 100%;
 }
-span{
+
+span {
     font-weight: 500;
     color: rgb(24, 178, 224);
 }
-.white{
+
+.white {
     background-color: white;
 }
-grey{
+
+grey {
     color: grey;
 }
-underline{
+
+underline {
     text-decoration: underline;
     text-decoration-color: grey;
     font-weight: 600;
 }
-.label{
+
+.label {
     padding: 5px 15px 5px 5px;
     position: absolute;
     top: 45px;
@@ -54,10 +66,11 @@ underline{
     transform: rotate(270deg);
     color: white;
 }
+
 /* ------------------------------ */
 
 /* ----- ICONS STYLING ------ */
-#contactlinks{
+#contactlinks {
     z-index: 1;
     font-size: 40px;
     position: fixed;
@@ -66,39 +79,48 @@ underline{
     width: 30px;
     height: 100%;
 }
-.contactlink{
+
+.contactlink {
     padding: 10px;
 }
-#mailicon{
+
+#mailicon {
     font-size: 35px;
 }
-#githubicon{
+
+#githubicon {
     font-size: 35px;
 }
+
 /* -------------------------- */
 
 /* ----- NAVBAR STYLING ----- */
-.header{
+.header {
     display: flex;
 }
-#navbar{
+
+#navbar {
     width: 100%;
     display: flex;
     padding: 40px 40px 40px 0px;
 }
-#navbarlogo{
+
+#navbarlogo {
     font-size: 45px;
     color: white;
 }
-#navbarlinks{
+
+#navbarlinks {
     font-size: 20px;
     display: flex;
     align-items: flex-end;
     margin: auto 0px auto auto;
 }
-.navbarlink{
+
+.navbarlink {
     margin-left: 30px;
 }
+
 /* #Pipe{
     height: 100px;
     transform: rotate(180deg);
@@ -108,37 +130,42 @@ underline{
 /* -------------------------- */
 
 /* -------- FIRST PAGE STYLING -------- */
-#Intro{
+#Intro {
     padding-top: 150px;
 }
-#IntroTitle{
-    position:absolute;
+
+#IntroTitle {
+    position: absolute;
     left: 95px;
     font-size: 200px;
     font-weight: 800;
     padding-left: 0px;
 }
-#MainIntro{
-    position:absolute;
+
+#MainIntro {
+    position: absolute;
     color: rgb(194, 193, 193);
     top: 500px;
     font-size: 20px;
     width: 50vw;
 }
-#MyImage{
+
+#MyImage {
     top: 150px;
     position: absolute;
     width: 380px;
     height: 650px;
     left: 1000px;
 }
+
 /* ------------------------------------- */
 
 /* -------- SECOND PAGE STYLING -------- */
-.aboutLabel{
+.aboutLabel {
     left: 60px;
 }
-#aboutContent{
+
+#aboutContent {
     margin-left: 80px;
     margin-top: 80px;
     padding: 80px 100px 80px 100px;
@@ -147,23 +174,150 @@ underline{
     border: solid 3px white;
     border-right: 0px;
 }
-#aboutContentTitle{
+
+#aboutContentTitle {
     font-size: 100px;
 }
-#aboutContentMain{
+
+#aboutContentMain {
     margin-top: 100px;
     color: rgb(206, 206, 206);
     font-size: 22px;
 }
+
 /* ------------------------------------- */
 
 /* -------- THIRD PAGE STYLING -------- */
-.projectLabel{
+.projectLabel {
     left: 45px;
 }
-#projectToolsAndTechnologiesTitle{
+
+#projectContent {
+    display: flex;
+    margin-left: 50px;
+}
+
+.card {
+    width: 430px;
+    height: 650px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.shifted {
+    margin-top: 100px;
+}
+
+.cardImage {
+    width: 430px;
+    height: 400px;
+    filter: brightness(90%);
+    overflow: hidden;
+    border-radius: 1rem;
+}
+
+.cardImage:hover {
+    animation: brightnessdecrease 1.5s forwards;
+}
+
+@keyframes brightnessdecrease {
+    from {
+        filter: brightness(90%);
+    }
+
+    to {
+        filter: brightness(30%);
+    }
+}
+
+.cardContent {
     position: absolute;
-    left: 250px;
+    left: 25px;
+    top: 350px;
+    padding: 20px;
+    width: 340px;
+    min-height: 150px;
+    background-color: white;
+    border-radius: 1rem;
+    color: black;
+}
+
+.cardContentTitle {
+    /* width: 100%; */
+    font-size: 25px;
+    font-weight: 500;
+    /* margin: 50px 0px; */
+}
+
+.cardContentMain {
+    margin-top: 25px;
+}
+
+.cardContentTechnologies {
+    margin-top: 20px;
+    display: flex;
+}
+
+.cardContentTechnology {
+    background-color: rgb(24, 178, 224);
+    color: white;
+    font-weight: 400;
+    padding: 5px;
+    margin-right: 5px;
+    border-radius: 1rem;
+}
+
+.projectLinks {
+    display: flex;
+    margin-top: 10px;
+}
+
+.projectLink {
+    height: 30px;
+    margin-right: 5px;
+    color: black;
+}
+
+/* ------------------------------------- */
+
+/* -------- FOURTH PAGE STYLING -------- */
+.toolsAndTechLabel {
+    left: 30px;
+}
+
+#toolsAndTechTitle {
+    position: absolute;
+    left: 280px;
     font-size: 50px;
 }
+#toolsAndTechContent{
+    padding-top: 100px;
+    margin-left: 150px;
+}
 /* ------------------------------------- */
+
+/* ---------- FOOTER STYLING ---------- */
+.footer {
+    margin-top: 100px;
+    padding-left: 250px;
+    font-size: 14px;
+    padding-bottom: 100px;
+}
+
+.footerNav {
+    display: flex;
+}
+
+.footerNavLink {
+    margin: 0px 5px;
+}
+
+.copyright {
+    margin: 20px 0px 0px 5px;
+}
+
+.location {
+    margin: 5px 0px 0px 5px;
+}
+
+/* ------------------------------------ */

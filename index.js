@@ -3,8 +3,13 @@
 // console.log(window.innerWidth); // 1550
 // console.log(window.innerHeight); // 770
 // var height = window.innerHeight;
-var pos = [770, 1300];
+var pos = [793, 1420];
 $(document).ready(function() {
+    // const labels = document.getElementsByClassName('label');
+    // for(var i = 0;i<labels.length;i++){
+    //     const label = labels[i];
+    //     pos.push(label.getBoundingClientRect().y);
+    // }
     shiftLabels();
     addCodeforcesRank();
 });
@@ -29,8 +34,8 @@ function shiftLabels(){
     const labels = document.getElementsByClassName('label');
     for(var i = 0;i<labels.length;i++){
         const label = labels[i];
-        if(scrollY > pos[i] && scrollY < pos[i] + window.innerHeight - 250){
-            label.style.top = (scrollY - pos[i]).toString()+"px";
+        if(scrollY > pos[i]-100 && scrollY < pos[i] + window.innerHeight - 250){
+            label.style.top = (scrollY - pos[i] + 100).toString()+"px";
         }
     }
 }
