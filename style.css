@@ -11,7 +11,8 @@ body {
     scroll-behavior: smooth;
     overflow-x: hidden;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
     display: none;
 }
 
@@ -22,16 +23,6 @@ a {
 
 a:hover {
     animation: colorchange 1.5s alternate-reverse;
-}
-
-@keyframes colorchange {
-    from {
-        color: white;
-    }
-
-    to {
-        color: rgb(24, 178, 224);
-    }
 }
 
 .page {
@@ -127,7 +118,6 @@ underline {
     display: none;
     height: 25px;
     z-index: 2;
-    display: flex;
     margin: auto 0px auto auto;
 }
 
@@ -143,7 +133,8 @@ underline {
 #slidingnavbarlinks {
     margin: auto 110px auto auto;
 }
-.slidingnavbarlink{
+
+.slidingnavbarlink {
     font-size: 40px;
     margin-top: 40px;
 }
@@ -262,16 +253,6 @@ underline {
 
 .cardImage:hover {
     animation: brightnessdecrease 1s forwards;
-}
-
-@keyframes brightnessdecrease {
-    from {
-        filter: brightness(90%);
-    }
-
-    to {
-        filter: brightness(50%);
-    }
 }
 
 .cardContent {
@@ -445,5 +426,25 @@ underline {
     #MainIntro {
         top: 420px;
         width: 65%;
+    }
+}
+
+@keyframes colorchange {
+    from {
+        color: white;
+    }
+
+    to {
+        color: rgb(24, 178, 224);
+    }
+}
+
+@keyframes brightnessdecrease {
+    from {
+        filter: brightness(90%);
+    }
+
+    to {
+        filter: brightness(50%);
     }
 }
