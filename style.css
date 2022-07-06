@@ -3,12 +3,16 @@ html,
 body {
     z-index: 0;
     margin: 0px;
-    font-family: 'Ubuntu';
+    font-family: "Ubuntu";
     font-weight: 300;
     height: 100%;
     background-color: black;
     color: white;
     scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+::-webkit-scrollbar{
+    display: none;
 }
 
 a {
@@ -112,13 +116,36 @@ underline {
 
 #navbarlinks {
     font-size: 20px;
-    display: flex;
-    align-items: flex-end;
     margin: auto 0px auto auto;
 }
 
 .navbarlink {
     margin-left: 30px;
+}
+
+#slidingnavbaricon {
+    display: none;
+    height: 25px;
+    z-index: 2;
+    display: flex;
+    margin: auto 0px auto auto;
+}
+
+#slidingnavbar {
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    height: 100%;
+    width: 90%;
+    display: none;
+}
+
+#slidingnavbarlinks {
+    margin: auto 110px auto auto;
+}
+.slidingnavbarlink{
+    font-size: 40px;
+    margin-top: 40px;
 }
 
 /* #Pipe{
@@ -155,7 +182,7 @@ underline {
     position: absolute;
     width: 380px;
     height: 650px;
-    left: 1000px;
+    left: 65%;
 }
 
 /* ------------------------------------- */
@@ -167,7 +194,7 @@ underline {
 
 #aboutContent {
     margin: 80px 0px 100px 80px;
-    padding: 80px 150px 80px 100px;
+    padding: 80px 5% 80px 100px;
     color: white;
     border: solid 3px white;
     border-right: 0px;
@@ -201,6 +228,7 @@ underline {
     width: 50px;
     height: 50px;
 }
+
 /* ------------------------------------- */
 
 /* -------- THIRD PAGE STYLING -------- */
@@ -296,7 +324,6 @@ underline {
 
 /* ------------------------------------- */
 
-
 /* ---------- FOOTER STYLING ---------- */
 .footer {
     margin-top: 100px;
@@ -322,3 +349,101 @@ underline {
 }
 
 /* ------------------------------------ */
+
+@media only screen and (max-width: 950px) {
+    #contactlinks {
+        font-size: 33px;
+        top: 35px;
+        left: 15px;
+        width: 20px;
+    }
+
+    #mailicon {
+        font-size: 30px;
+    }
+
+    #githubicon {
+        font-size: 30px;
+    }
+
+    #navbar {
+        padding: 30px 30px 30px 0px;
+    }
+
+    #navbarlogo {
+        font-size: 35px;
+    }
+
+    #navbarlinks {
+        font-size: 17px;
+    }
+
+    .navbarlink {
+        margin-left: 25px;
+    }
+
+    #Intro {
+        padding-top: 100px;
+    }
+
+    #IntroTitle {
+        padding-top: 90px;
+        padding-left: 5px;
+        font-size: 150px;
+    }
+
+    #MainIntro {
+        top: 480px;
+        font-size: 18px;
+    }
+
+    #MyImage {
+        top: 100px;
+        width: 350px;
+        height: 600px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
+    #Intro {
+        padding-top: 100px;
+    }
+
+    #IntroTitle {
+        font-size: 150px;
+    }
+
+    #MainIntro {
+        width: 80%;
+        font-size: 18px;
+    }
+
+    #MyImage {
+        display: none;
+    }
+
+    #slidingnavbaricon {
+        display: block;
+    }
+
+    #navbarlinks {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 625px) {
+    #Intro {
+        padding-top: 100px;
+    }
+
+    #IntroTitle {
+        padding-top: 90px;
+        padding-left: 10px;
+        font-size: 100px;
+    }
+
+    #MainIntro {
+        top: 420px;
+        width: 65%;
+    }
+}

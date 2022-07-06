@@ -34,6 +34,20 @@
             <a class="navbarlink" href="#about">About</a>
             <a class="navbarlink" href="#projects">Projects</a>
           </div>
+          <i id="slidingnavbaricon" class="fas fa-bars" onclick="toggleNavbar();toggleScroll();"></i>
+        </div>
+        <div id="slidingnavbar">
+          <div id="slidingnavbarlinks">
+            <div class="slidingnavbarlink">
+              <a href="#home" onclick="toggleNavbar();toggleScroll();">Home</a>
+            </div>
+            <div class="slidingnavbarlink">
+              <a href="#about" onclick="toggleNavbar();toggleScroll();">About</a>
+            </div>
+            <div class="slidingnavbarlink">
+              <a href="#projects" onclick="toggleNavbar();toggleScroll();">Projects</a>
+            </div>
+          </div>
         </div>
       </div>
       <!-- -------------------------- -->
@@ -209,5 +223,6 @@
     </div>
   </body>
   <script src="index.js"></script>
+  <script src="slidingNavbar.js"></script>
 
 </html>
