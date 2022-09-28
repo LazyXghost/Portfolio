@@ -303,6 +303,20 @@ underline {
     color: black;
 }
 
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.column {
+    -ms-flex: 50%;
+    flex: 50%;
+    max-width: 50%;
+    align-items: center;
+}
+
 /* ------------------------------------- */
 
 /* ---------- FOOTER STYLING ---------- */
@@ -382,6 +396,17 @@ underline {
         top: 100px;
         width: 350px;
         height: 600px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .column {
+        -ms-flex: 100%;
+        flex: 100%;
+        max-width: 100%;
+    }
+    .shifted {
+        margin-top: 0px;
     }
 }
 
