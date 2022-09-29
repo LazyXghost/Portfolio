@@ -32,6 +32,7 @@
             <a class="navbarlink" href="#home">Home</a>
             <a class="navbarlink" href="#about">About</a>
             <a class="navbarlink" href="#projects">Projects</a>
+            <a class="navbarlink" href="#gallery">Gallery</a>
           </div>
           <i id="slidingnavbaricon" class="fas fa-bars" onclick="toggleNavbar();toggleScroll();"></i>
         </div>
@@ -45,6 +46,9 @@
             </div>
             <div class="slidingnavbarlink">
               <a href="#projects" onclick="toggleNavbar();toggleScroll();">Projects</a>
+            </div>
+            <div class="slidingnavbarlink">
+              <a href="#gallery" onclick="toggleNavbar();toggleScroll();">Gallery</a>
             </div>
           </div>
         </div>
@@ -115,7 +119,9 @@
               <i>
                 <svg class="toolsAndTechIcon" viewBox="0 0 128 128">
                   <path fill="grey" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"></path>\
-                  <path fill="grey" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"></path><path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z"></path><path d="M82.1 61.8h5.2v-5.3h4.4v5.3H97v4.4h-5.3v5.2h-4.4v-5.2h-5.2v-4.4zm18.5 0h5.2v-5.3h4.4v5.3h5.3v4.4h-5.3v5.2h-4.4v-5.2h-5.2v-4.4z" fill="#fff"></path>
+                  <path fill="grey" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"></path>
+                  <path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6z"></path>
+                  <path d="M82.1 61.8h5.2v-5.3h4.4v5.3H97v4.4h-5.3v5.2h-4.4v-5.2h-5.2v-4.4zm18.5 0h5.2v-5.3h4.4v5.3h5.3v4.4h-5.3v5.2h-4.4v-5.2h-5.2v-4.4z" fill="#fff"></path>
                 </svg>
               </i>
               <div class="iconLabel">C++</div>
@@ -128,104 +134,118 @@
               <i class="toolsAndTechIcon fa-brands fa-github"></i>
               <div class="iconLabel">Github</div>
             </div>
-        </div>
-      </div>
-    </div>
-    <!-- ------------------------------------ -->
-    <!-- ------------ THIRD PAGE ----------- -->
-    <div class="page fullPage" id="projects">
-      <div class="label projectLabel">Projects</div>
-      <div class ="row" id="projectContent">
-        <div class="column">
-          <div class="card">
-            <img src="images/projectPortal.png" class = "cardImage" alt="">
-            <div class="cardContent">
-              <div class="cardContentTitle">
-                Project Portal
-              </div>
-              <div class="cardContentMain">
-                This is a full stack web application on which students and faculty can float and apply on different projects.
-              </div>
-              <div class="cardContentTechnologies">
-                <div class="cardContentTechnology">Django</div>
-                <div class="cardContentTechnology">Python</div>
-                <div class="cardContentTechnology">HTML</div>
-                <div class="cardContentTechnology">CSS</div>
-                <div class="cardContentTechnology">Javascript</div>
-              </div>
-              <div class="projectLinks">
-                <a href="https://github.com/naveensaigit/project_portal"><i class="fab fa-github projectLink"></i></a>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <img src="images/mazinda.png" class = "cardImage" alt="">
-            <div class="cardContent">
-              <div class="cardContentTitle">
-                Mazinda
-              </div>
-              <div class="cardContentMain">
-                This is a full stack web application on which students and faculty can float and apply on different projects.
-              </div>
-              <div class="cardContentTechnologies">
-                <div class="cardContentTechnology">NodeJS</div>
-                <div class="cardContentTechnology">ExpressJS</div>
-                <div class="cardContentTechnology">MongoDB</div>
-                <div class="cardContentTechnology">HTML</div>
-                <div class="cardContentTechnology">CSS</div>
-                <div class="cardContentTechnology">JS</div>
-              </div>
-              <div class="projectLinks">
-                <a href="https://github.com/naveensaigit/project_portal"><i class="fab fa-github projectLink"></i></a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="column shifted">
-          <div class="card">
-            <img src="images/projectPortal.png" class = "cardImage" alt="">
-            <div class="cardContent">
-              <div class="cardContentTitle">
-                Project Portal
-              </div>
-              <div class="cardContentMain">
-                This is a full stack web application on which students and faculty can float and apply on different projects.
-              </div>
-              <div class="cardContentTechnologies">
-                <div class="cardContentTechnology">Django</div>
-                <div class="cardContentTechnology">Python</div>
-                <div class="cardContentTechnology">HTML</div>
-                <div class="cardContentTechnology">CSS</div>
-                <div class="cardContentTechnology">Javascript</div>
-              </div>
-              <div class="projectLinks">
-                <a href="https://github.com/naveensaigit/project_portal"><i class="fab fa-github projectLink"></i></a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- ------------------------------------ -->
-
-    <div class="footer"> 
-      <div class="footerNav">
-        <div class="footerNavLink"><a href="#home">HOME</a></div>/ 
-        <div class="footerNavLink"><a href="#about">ABOUT</a></div>/ 
-        <div class="footerNavLink"><a href="#projects">PROJECTS</a></div>
+      <!-- ------------------------------------ -->
+      <!-- ------------ THIRD PAGE ----------- -->
+      <div class="page fullPage" id="projects">
+        <div class="label projectLabel">Projects</div>
+        <div class="row" id="projectContent">
+          <div class="column">
+            <div class="card">
+              <img src="images/projectPortal.png" class="cardImage" alt="">
+              <div class="cardContent">
+                <div class="cardContentTitle">
+                  Project Portal
+                </div>
+                <div class="cardContentMain">
+                  This is a full stack web application on which students and faculty can float and apply on different projects.
+                </div>
+                <div class="cardContentTechnologies">
+                  <div class="cardContentTechnology">Django</div>
+                  <div class="cardContentTechnology">Python</div>
+                  <div class="cardContentTechnology">HTML</div>
+                  <div class="cardContentTechnology">CSS</div>
+                  <div class="cardContentTechnology">Javascript</div>
+                </div>
+                <div class="projectLinks">
+                  <a href="https://github.com/naveensaigit/project_portal"><i class="fab fa-github projectLink"></i></a>
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <img src="images/mazinda.png" class="cardImage" alt="">
+              <div class="cardContent">
+                <div class="cardContentTitle">
+                  Mazinda
+                </div>
+                <div class="cardContentMain">
+                  This is a full stack web application on which students and faculty can float and apply on different projects.
+                </div>
+                <div class="cardContentTechnologies">
+                  <div class="cardContentTechnology">NodeJS</div>
+                  <div class="cardContentTechnology">ExpressJS</div>
+                  <div class="cardContentTechnology">MongoDB</div>
+                  <div class="cardContentTechnology">HTML</div>
+                  <div class="cardContentTechnology">CSS</div>
+                  <div class="cardContentTechnology">JS</div>
+                </div>
+                <div class="projectLinks">
+                  <a href="https://github.com/naveensaigit/project_portal"><i class="fab fa-github projectLink"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="column shifted">
+            <div class="card">
+              <img src="images/projectPortal.png" class="cardImage" alt="">
+              <div class="cardContent">
+                <div class="cardContentTitle">
+                  Project Portal
+                </div>
+                <div class="cardContentMain">
+                  This is a full stack web application on which students and faculty can float and apply on different projects.
+                </div>
+                <div class="cardContentTechnologies">
+                  <div class="cardContentTechnology">Django</div>
+                  <div class="cardContentTechnology">Python</div>
+                  <div class="cardContentTechnology">HTML</div>
+                  <div class="cardContentTechnology">CSS</div>
+                  <div class="cardContentTechnology">Javascript</div>
+                </div>
+                <div class="projectLinks">
+                  <a href="https://github.com/naveensaigit/project_portal"><i class="fab fa-github projectLink"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="copyright">
-        &copy 2022 Rajat Bansal, All Rights Reserved
+      <!-- ------------------------------------ -->
+      <!-- ------------ FOURTH PAGE ----------- -->
+      <div class="page fullPage" id="gallery">
+        <div class="label galleryLabel">Gallery</div>
+        <div class="row" id="galleryContent">
+          <img src="images/AlbumImages/4.jpg" class="portrait" alt="" style="left:20px; top:20px; z-index:100;">
+          <img src="images/AlbumImages/15.jpg" class="portrait" alt="" style="left:240px; top:150px; z-index:100;">
+          <img src="images/AlbumImages/8.jpg" class="portrait" alt="" style="left:550px; top:45px; z-index: 100;">
+          <img src="images/AlbumImages/17.jpg" class="portrait" alt="" style="left: 1000px;top: 30px;z-index: 100;">
+          <img src="images/AlbumImages/10.jpg" class="portrait" alt="" style="left: 1450px;top: 10px;z-index: 100;">
+          <img src="images/AlbumImages/2.jpg" class="portrait" alt="" style="left: 930px;top: 420px;z-index: 100;">
+          <img src="images/AlbumImages/13.jpg" class="portrait landscape" alt="" style="left: 1330px;top: 390px;z-index: 100;">
+          <img src="images/AlbumImages/3.jpg" class="force-portrait" alt="" style="left: 0px;top: 540px;z-index: 100;">
+          <img src="images/AlbumImages/1.jpg" class="landscape" alt="" style="left: 370px;top: 660px;z-index: 100;">
+          <img src="images/AlbumImages/6.jpg" class="landscape" alt="" style="left: 1050px;top: 800px;z-index: 100;">
+          <img src="images/AlbumImages/11.jpg" class="portrait" alt="" style="left: 1420px;top: 700px;z-index: 100;">
+        </div>
       </div>
-      <div class="location">
-        Kaithal - Haryana - India.
+      <!-- ------------------------------------ -->
+      <div class="footer">
+        <div class="footerNav">
+          <div class="footerNavLink"><a href="#home">HOME</a></div>/
+          <div class="footerNavLink"><a href="#about">ABOUT</a></div>/
+          <div class="footerNavLink"><a href="#projects">PROJECTS</a></div>
+        </div>
+        <div class="copyright">
+          &copy 2022 Rajat Bansal, All Rights Reserved
+        </div>
+        <div class="location">
+          Kaithal - Haryana - India.
+        </div>
       </div>
-    </div>
   </body>
-
   <script src="index.js"></script>
 
 </html>
-
-
 <!-- Add fadein effect in sliding navbar -->

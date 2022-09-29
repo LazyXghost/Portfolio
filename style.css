@@ -319,9 +319,41 @@ underline {
 
 /* ------------------------------------- */
 
+/* -------- FOURTH STYLING -------- */
+.galleryLabel {
+    left: -70px;
+}
+
+#galleryContent {
+    display: flex;
+    margin-left: -50px;
+    min-height: 100vh;
+    position: relative;
+}
+
+.landscape{
+    position: absolute;
+    max-height: 300px;
+    max-width: 450px;
+}
+.portrait{
+    position: absolute;
+    max-height: 450px;
+    max-width: 300px;
+}
+.force-portrait{
+    position: absolute;
+    height: 460px;
+    width: 270px;
+    object-fit: cover;
+
+}
+
+/* ------------------------------------- */
+
 /* ---------- FOOTER STYLING ---------- */
 .footer {
-    margin-top: 100px;
+    margin-top: 200px;
     padding-left: 70px;
     font-size: 14px;
     padding-bottom: 100px;
@@ -405,6 +437,7 @@ underline {
         flex: 100%;
         max-width: 100%;
     }
+
     .shifted {
         margin-top: 0px;
     }

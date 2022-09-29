@@ -1,9 +1,11 @@
 const areas = {}
 $(document).ready(function() {
     const aboutArea = document.querySelector('#aboutContent').getBoundingClientRect();
-    areas["aboutLabel"] = [aboutArea.y, aboutArea.bottom-300, 40];
+    areas["aboutLabel"] = [aboutArea.y, aboutArea.bottom-200, 40];
     const projectArea = document.querySelector('#projectContent').getBoundingClientRect();
     areas["projectLabel"] = [projectArea.y, projectArea.bottom-300, 70];
+    const galleryArea = document.querySelector('#galleryContent').getBoundingClientRect();
+    areas["galleryLabel"] = [galleryArea.y, galleryArea.bottom-250, 70];
 })
 window.addEventListener("scroll", shiftLabels, true);
 
@@ -24,6 +26,7 @@ function shiftLabel(labelClass) {
 function shiftLabels() {
     shiftLabel('aboutLabel');
     shiftLabel('projectLabel');
+    shiftLabel('galleryLabel');
 }
 
 function addCodeforcesRank() {
