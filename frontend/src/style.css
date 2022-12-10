@@ -43,13 +43,14 @@ span {
     background-color: white;
 }
 
-grey {
+.grey {
     color: grey;
 }
 
-underline {
+.underline {
     text-decoration: underline;
     text-decoration-color: grey;
+    color: grey;
     font-weight: 600;
 }
 

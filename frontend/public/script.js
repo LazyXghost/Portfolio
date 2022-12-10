@@ -35,7 +35,7 @@ function addCodeforcesRank() {
     Http.open("GET", url);
     Http.send();
     Http.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             var response = JSON.parse(Http.response);
             var rank = response['result'][0]['rank'];
             var elem = document.getElementById('rank');
