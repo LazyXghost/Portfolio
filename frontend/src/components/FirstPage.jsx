@@ -1,10 +1,8 @@
 import React from "react";
-import Navbar from "./Navbar.jsx";
 
 export default function FirstPage() {
     return (
         <div className="page fullPage" id="home">
-            <Navbar />
             <div id="Intro">
                 <div id="IntroTitle">
                     Hello<span className="grey">.</span>

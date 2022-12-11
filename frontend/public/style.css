@@ -93,6 +93,7 @@ span {
 /* ----- NAVBAR STYLING ----- */
 .header {
     display: flex;
+    margin-left: 110px;
 }
 
 #navbar {
