@@ -12,7 +12,7 @@ let areas = {};
 
 class App extends React.Component {
   componentDidMount() {
-    if (window.location.href !== 'http://localhost:3000/projects') {
+    if (window.location.href === 'http://localhost:3000/') {
       const aboutArea = document.querySelector('#aboutContent').getBoundingClientRect();
       areas["aboutLabel"] = [aboutArea.y, aboutArea.bottom - 200, 40];
       const projectArea = document.querySelector('#projectContent').getBoundingClientRect();
@@ -52,7 +52,7 @@ class App extends React.Component {
         <Router>
           <Routes >
             <Route path="/" element={<><FirstPage /><SecondPage /><ThirdPage />{/* <FourthPage /> */}</>} />
-            <Route path="/projects" element={<><RBTVisualiser /></>} />
+            <Route path="/visualiser" element={<><RBTVisualiser /></>} />
           </Routes>
         </Router>
         <Footer />

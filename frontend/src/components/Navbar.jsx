@@ -25,6 +25,7 @@ export default function Navbar() {
                     <a className="navbarlink" href="#home">Home</a>
                     <a className="navbarlink" href="#about">About</a>
                     <a className="navbarlink" href="#projects">Projects</a>
+                    <a className="navbarlink" href="/visualiser">Visualiser</a>
                     {/* <a className="navbarlink" href="#gallery">Gallery</a> */}
                 </div>
                 <div id="slidingnavbaricon" onClick={toggleNavbar}>
@@ -41,6 +42,9 @@ export default function Navbar() {
                     </div>
                     <div className="slidingnavbarlink">
                         <a href="#projects" onClick={toggleNavbar}>Projects</a>
+                    </div>
+                    <div className="slidingnavbarlink">
+                        <a href="/visualiser" onClick={toggleNavbar}>Visualiser</a>
                     </div>
                     {/* <div className="slidingnavbarlink">
                         <a href="#gallery" onClick={toggleNavbar}>Gallery</a>
