@@ -117,9 +117,12 @@ span {
 
 #slidingnavbaricon {
     display: none;
-    height: 25px;
     z-index: 2;
     margin: auto 0px auto auto;
+}
+
+#slidingnavbaricon > svg {
+    height: 25px;
 }
 
 #slidingnavbar {
@@ -225,7 +228,7 @@ span {
 
 /* -------- THIRD PAGE STYLING -------- */
 .projectLabel {
-    left: -70px;
+    left: 45px;
 }
 
 #projectContent {
@@ -321,7 +324,7 @@ span {
 /* ------------------------------------- */
 
 /* -------- FOURTH STYLING -------- */
-.galleryLabel {
+/* .galleryLabel {
     left: -70px;
 }
 
@@ -348,7 +351,7 @@ span {
     width: 270px;
     object-fit: cover;
 
-}
+} */
 
 /* ------------------------------------- */
 
