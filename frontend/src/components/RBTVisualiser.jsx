@@ -24,7 +24,6 @@ const Arrow = function (props) {
     let hm = Math.min(start[0], end[0]);
     let vm = Math.min(start[1], end[1]);
     let vg = Math.abs(start[1] - end[1]), hg = Math.abs(start[0] - end[0]);
-    let angle = Math.atan(vg/hg) * 180 / 3.14;
     let length = hg + Math.sqrt(vg);
     
     let left, right;
@@ -56,7 +55,7 @@ const Arrow = function (props) {
 
     return (
         <svg className="arrow" width={hg} height={vg} style={{postion:"absolute", left: hm+25, top: vm+25}}>
-            <path d={"M0"+","+left+" L"+length+","+right} style={{stroke: "white", strokeWidth: "2px", fill: "none"}}></path>
+            <path d={"M0,"+left+" L"+length+","+right} style={{stroke: "white", strokeWidth: "2px", fill: "none"}}></path>
         </svg>
     )
 };
