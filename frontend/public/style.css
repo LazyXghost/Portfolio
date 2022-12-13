@@ -365,8 +365,7 @@ span {
     margin-top: 50px;
     position: relative;
     height: 50vw;
-    overflow-x: scroll;
-    overflow-y: scroll;
+    overflow: hidden;
 }
 .treeNode-black, .treeNode-red{
     border: 5px solid white;
@@ -387,6 +386,19 @@ span {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+#arrows{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 50vw;
+    width: 100%;
+    margin-left: 110px;
+    margin-top: 70px;
+    overflow: hidden;
+}
+.arrow{
+    position: absolute;
 }
 /* ------------------------------------- */
 

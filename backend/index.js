@@ -20,7 +20,9 @@ app.get('/visualiser', (req, res, next) => {
 })
 app.post('/visualiser', (req, res, next) => {
     tree.insert(req.body['value']);
-    res.send(tree.display());
+
+    let displayData = tree.display(req.body['verticalGap'], req.body['horizontalGap']);
+    res.send(displayData);
 })
 
 const server = app.listen(port, function () {

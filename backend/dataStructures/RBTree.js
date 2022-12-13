@@ -1,6 +1,7 @@
 class TreeNode
 {
-    constructor(value){
+    constructor(value, id){
+        this.id = id;
         this.val = value;
         this.par = null;
         this.left = null;
@@ -11,6 +12,7 @@ class TreeNode
 
 class RBTree
 {
+    nextId = 1;
     contructor(){
         this.root = null;
     }
@@ -154,7 +156,9 @@ class RBTree
     }
     insert(x)
     {
-        let child = new TreeNode(x);
+        let child = new TreeNode(x, this.nextId);
+        this.nextId++;
+
         if (this.root == null)
             this.root = child;
         else
@@ -162,25 +166,41 @@ class RBTree
         this.correctTree(child);
     }
 
-    inorder(trav, node, level)
+    inorder(trav, arrows, node, level)
     {
         if (node == null)
             return;
-    
-        this.inorder(trav, node.left, level + 1);
+
+        if(node.par != null)
+            arrows.push([node.par.id, node.id]);
+        this.inorder(trav, arrows, node.left, level + 1);
         trav.push([node, level]);
-        this.inorder(trav, node.right, level + 1);
+        this.inorder(trav, arrows, node.right, level + 1);
     }
 
-    display()
+    display(verticalGap, horizontalGap)
     {
         let trav = [];
-        this.inorder(trav, this.root, 0);
+        let arrows = [];
+        this.inorder(trav, arrows, this.root, 0);
 
         let ftrav = [];
-        for (let i = 0; i < trav.length; i++)
-            ftrav.push({id: i, value: trav[i][0].val, color: trav[i][0].color, level: trav[i][1]});
-        return ftrav;
+        let mpos = [];
+        let gap = 0;
+        for (let i = 0; i < trav.length; i++){
+            mpos.push({id: trav[i][0].id, left: gap, top: trav[i][1] * verticalGap});
+            ftrav.push({id: trav[i][0].id, value: trav[i][0].val, color: trav[i][0].color, left: gap, top: trav[i][1] * verticalGap});        
+            gap += horizontalGap;
+        }
+
+        mpos.sort(function(a,b){return a.id - b.id});
+
+        let farrows = [];
+        for(let i = 0; i < arrows.length; i++){
+            let ids = arrows[i];
+            farrows.push({id: i, start: [mpos[ids[0]-1].left, mpos[ids[0]-1].top], end: [mpos[ids[1]-1].left, mpos[ids[1]-1].top]});
+        }
+        return {nodesPos: ftrav,arrowsPos: farrows};
     }
 };
 
