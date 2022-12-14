@@ -22,9 +22,9 @@ export default function Navbar() {
                     <div id="navbarlogo">Lazy<span id="navlogo">X</span>ghost</div>
                 </a>
                 <div id="navbarlinks">
-                    <a className="navbarlink" href="#home">Home</a>
-                    <a className="navbarlink" href="#about">About</a>
-                    <a className="navbarlink" href="#projects">Projects</a>
+                    <a className="navbarlink" href="/#home">Home</a>
+                    <a className="navbarlink" href="/#about">About</a>
+                    <a className="navbarlink" href="/#projects">Projects</a>
                     <a className="navbarlink" href="/visualiser">Visualiser</a>
                     {/* <a className="navbarlink" href="#gallery">Gallery</a> */}
                 </div>
@@ -35,13 +35,13 @@ export default function Navbar() {
             <div id="slidingnavbar">
                 <div id="slidingnavbarlinks">
                     <div className="slidingnavbarlink">
-                        <a href="#home" onClick={toggleNavbar}>Home</a>
+                        <a href="/#home" onClick={toggleNavbar}>Home</a>
                     </div>
                     <div className="slidingnavbarlink">
-                        <a href="#about" onClick={toggleNavbar}>About</a>
+                        <a href="/#about" onClick={toggleNavbar}>About</a>
                     </div>
                     <div className="slidingnavbarlink">
-                        <a href="#projects" onClick={toggleNavbar}>Projects</a>
+                        <a href="/#projects" onClick={toggleNavbar}>Projects</a>
                     </div>
                     <div className="slidingnavbarlink">
                         <a href="/visualiser" onClick={toggleNavbar}>Visualiser</a>

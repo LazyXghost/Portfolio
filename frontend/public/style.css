@@ -137,6 +137,7 @@ span {
     height: 100%;
     width: 90%;
     display: none;
+    transition: all 1s linear;
 }
 
 #slidingnavbarlinks {
@@ -182,7 +183,7 @@ span {
     position: absolute;
     width: 380px;
     height: 650px;
-    left: 65%;
+    right: 100px;
 }
 
 /* ------------------------------------- */
@@ -193,7 +194,7 @@ span {
 }
 
 #aboutContent {
-    margin: 80px 0px 100px 80px;
+    margin: 0px 0px 100px 80px;
     padding: 80px 5% 80px 100px;
     color: white;
     border: solid 3px white;
@@ -426,8 +427,19 @@ span {
 }
 
 /* ------------------------------------ */
+@media only screen and (max-width: 1350px) {
+    #MyImage {
+        top: 100px;
+        right: 50px;
+    }
+}
+@media only screen and (max-width: 1200px) {
+    #MyImage {
+        right: 30px;
+    }
+}
 
-@media only screen and (max-width: 950px) {
+@media only screen and (max-width: 1100px) {
     #contactlinks {
         font-size: 33px;
         top: 35px;
@@ -475,19 +487,87 @@ span {
     }
 
     #MyImage {
-        top: 100px;
-        width: 350px;
-        height: 600px;
+        top: 130px;
+        width: 320px;
+        height: 550px;
+        right: 30px;
+    }
+
+    .label{
+        font-size: 34px;
+    }
+
+    #aboutContent{
+        padding-top: 30px;
+        padding-left: 50px;
+        padding-bottom: 30px;
+    }
+    #aboutContentTitle{
+        font-size: 80px;
+    }
+
+    #aboutContentMain{
+        margin-top: 40px;
+        font-size: 18px;
+    }
+
+    #toolsAndTechTitle{
+        margin-top: 45px;
+        font-size: 35px;
+    }
+
+    .toolsAndTechIcon{
+        height: 40px;
+        width: 40px;
+    }
+    .iconLabel{
+        font-size: 15px;
     }
 }
 
+@media only screen and (max-width: 960px) {
+    #MyImage {
+        display: none;
+    }
+
+    .label{
+        font-size: 30px;
+    }
+
+    #aboutContent{
+        margin-left: 40px;
+        padding-top: 20px;
+        padding-left: 35px;
+        padding-bottom: 20px;
+    }
+    #aboutContentTitle{
+        font-size: 55px;
+    }
+    
+    #aboutContentMain{
+        margin-top: 25px;
+        font-size: 18px;
+    }
+    
+    #toolsAndTechTitle{
+        margin-top: 30px;
+        font-size: 25px;
+    }
+    
+    .toolsAndTechIcon{
+        height: 30px;
+        width: 30px;
+    }
+    .iconLabel{
+        font-size: 12px;
+    }
+}
 @media only screen and (max-width: 800px) {
     .column {
         -ms-flex: 100%;
         flex: 100%;
         max-width: 100%;
     }
-
     .shifted {
         margin-top: 0px;
     }
@@ -505,10 +585,6 @@ span {
     #MainIntro {
         width: 80%;
         font-size: 18px;
-    }
-
-    #MyImage {
-        display: none;
     }
 
     #slidingnavbaricon {
