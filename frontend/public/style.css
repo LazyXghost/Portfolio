@@ -58,15 +58,6 @@ span {
     font-weight: 600;
 }
 
-.label {
-    padding: 5px 15px 5px 5px;
-    position: absolute;
-    top: 45px;
-    font-size: 35px;
-    transform: rotate(270deg);
-    color: white;
-}
-
 /* ------------------------------ */
 
 /* ----- ICONS STYLING ------ */
@@ -74,9 +65,8 @@ span {
     z-index: 1;
     font-size: 40px;
     position: fixed;
-    top: 45px;
-    left: 15px;
-    width: 30px;
+    padding: 45px 20px;
+    width: 50px;
     height: 100%;
 }
 
@@ -126,7 +116,7 @@ span {
     margin: auto 0px auto auto;
 }
 
-#slidingnavbaricon > svg {
+#slidingnavbaricon>svg {
     height: 25px;
 }
 
@@ -190,7 +180,13 @@ span {
 
 /* -------- SECOND PAGE STYLING -------- */
 .aboutLabel {
-    left: 60px;
+    position: sticky;
+    top: 0px;
+    height: 50px;
+    font-size: 35px;
+    transform: rotate(270deg) translateX(-90px) translateY(10px);
+    transform-origin: center left;
+    color: white;
 }
 
 #aboutContent {
@@ -222,19 +218,25 @@ span {
 }
 
 .iconContainer {
-    margin-right: 30px;
+    margin-right: 27px;
 }
 
 .toolsAndTechIcon {
-    width: 50px;
-    height: 50px;
+    width: 48px;
+    height: 48px;
 }
 
 /* ------------------------------------- */
 
 /* -------- THIRD PAGE STYLING -------- */
 .projectLabel {
-    left: 45px;
+    position: sticky;
+    top: 0px;
+    height: 50px;
+    font-size: 35px;
+    transform: rotate(270deg) translateX(-90px) translateY(10px);
+    transform-origin: center left;
+    color: white;
 }
 
 #projectContent {
@@ -362,33 +364,39 @@ span {
 /* ------------------------------------- */
 
 /* ---------- VISUALISER STYLING ---------- */
-#tree{
+#tree {
     margin-top: 50px;
     position: relative;
     height: 50vw;
     overflow: hidden;
 }
-.treeNode-black, .treeNode-red{
+
+.treeNode-black,
+.treeNode-red {
     border: 5px solid white;
     border-radius: 5rem;
     position: absolute;
     width: 50px;
     height: 50px;
 }
-.treeNode-black{
+
+.treeNode-black {
     background-color: black;
 }
-.treeNode-red{
+
+.treeNode-red {
     background-color: red;
 }
-.treeNode-value{
+
+.treeNode-value {
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-#arrows{
+
+#arrows {
     position: absolute;
     top: 0px;
     left: 0px;
@@ -398,9 +406,11 @@ span {
     margin-top: 70px;
     overflow: hidden;
 }
-.arrow{
+
+.arrow {
     position: absolute;
 }
+
 /* ------------------------------------- */
 
 /* ---------- FOOTER STYLING ---------- */
@@ -433,6 +443,7 @@ span {
         right: 50px;
     }
 }
+
 @media only screen and (max-width: 1200px) {
     #MyImage {
         right: 30px;
@@ -442,9 +453,16 @@ span {
 @media only screen and (max-width: 1100px) {
     #contactlinks {
         font-size: 33px;
-        top: 35px;
-        left: 15px;
-        width: 20px;
+        padding: 35px 15px;
+        width: 40px;
+    }
+
+    .header {
+        margin-left: 90px;
+    }
+
+    .page {
+        padding-left: 90px;
     }
 
     #mailicon {
@@ -479,6 +497,7 @@ span {
         padding-top: 90px;
         padding-left: 5px;
         font-size: 150px;
+        left: 75px;
     }
 
     #MainIntro {
@@ -493,93 +512,62 @@ span {
         right: 30px;
     }
 
-    .label{
+    .aboutLabel, .projectLabel {
         font-size: 34px;
     }
 
-    #aboutContent{
-        padding-top: 30px;
-        padding-left: 50px;
-        padding-bottom: 30px;
-    }
-    #aboutContentTitle{
-        font-size: 80px;
+    #aboutContent {
+        padding-top: 35px;
+        padding-left: 55px;
+        padding-bottom: 35px;
     }
 
-    #aboutContentMain{
-        margin-top: 40px;
-        font-size: 18px;
+    #aboutContentTitle {
+        font-size: 85px;
     }
 
-    #toolsAndTechTitle{
+    #aboutContentMain {
         margin-top: 45px;
-        font-size: 35px;
+        font-size: 20px;
     }
 
-    .toolsAndTechIcon{
-        height: 40px;
-        width: 40px;
+    #toolsAndTechTitle {
+        margin-top: 50px;
+        font-size: 40px;
     }
-    .iconLabel{
-        font-size: 15px;
+
+    .toolsAndTechIcon {
+        height: 43px;
+        width: 43px;
+    }
+
+    .iconLabel {
+        font-size: 16px;
     }
 }
 
 @media only screen and (max-width: 960px) {
-    #MyImage {
-        display: none;
-    }
-
-    .label{
+    #contactlinks {
         font-size: 30px;
-    }
-
-    #aboutContent{
-        margin-left: 40px;
-        padding-top: 20px;
-        padding-left: 35px;
-        padding-bottom: 20px;
-    }
-    #aboutContentTitle{
-        font-size: 55px;
-    }
-    
-    #aboutContentMain{
-        margin-top: 25px;
-        font-size: 18px;
-    }
-    
-    #toolsAndTechTitle{
-        margin-top: 30px;
-        font-size: 25px;
-    }
-    
-    .toolsAndTechIcon{
-        height: 30px;
+        padding: 35px 10px;
         width: 30px;
     }
-    .iconLabel{
-        font-size: 12px;
-    }
-}
-@media only screen and (max-width: 800px) {
-    .column {
-        -ms-flex: 100%;
-        flex: 100%;
-        max-width: 100%;
-    }
-    .shifted {
-        margin-top: 0px;
-    }
-}
 
-@media only screen and (max-width: 770px) {
+    .header {
+        margin-left: 80px;
+    }
+
+    .page {
+        padding-left: 80px;
+    }
+
     #Intro {
         padding-top: 100px;
     }
 
     #IntroTitle {
         font-size: 150px;
+        left: 65px;
     }
 
     #MainIntro {
@@ -587,12 +575,136 @@ span {
         font-size: 18px;
     }
 
+    #MyImage {
+        display: none;
+    }
+
+    .aboutLabel, .projectLabel {
+        font-size: 25px;
+    }
+
+    #about {
+        min-height: 80vh;
+    }
+
+    #aboutContent {
+        margin-left: 50px;
+        padding-top: 30px;
+        padding-left: 40px;
+        padding-bottom: 25px;
+    }
+
+    #aboutContentTitle {
+        font-size: 60px;
+    }
+
+    #aboutContentMain {
+        margin-top: 30px;
+        font-size: 20px;
+    }
+
+    #toolsAndTechTitle {
+        margin-top: 35px;
+        font-size: 30px;
+    }
+
+    .toolsAndTechIcon {
+        height: 33px;
+        width: 33px;
+    }
+
+    .iconLabel {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    #aboutContent {
+        margin-left: 40px;
+        padding-top: 20px;
+        padding-left: 35px;
+        padding-bottom: 20px;
+    }
+
+    #aboutContentTitle {
+        font-size: 55px;
+    }
+
+    #aboutContentMain {
+        margin-top: 25px;
+        font-size: 18px;
+    }
+
+    #toolsAndTechTitle {
+        margin-top: 30px;
+        font-size: 25px;
+    }
+
+    .toolsAndTechIcon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .iconLabel {
+        font-size: 13px;
+    }
+
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    .shifted {
+        margin-top: 0px;
+    }
+}
+
+@media only screen and (max-width: 770px) {
     #slidingnavbaricon {
         display: block;
     }
 
     #navbarlinks {
         display: none;
+    }
+
+    #about {
+        min-height: 80vh;
+    }
+
+    #aboutContent {
+        margin-left: 30px;
+        padding-top: 15px;
+        padding-left: 25px;
+        padding-bottom: 15px;
+    }
+
+    #aboutContentTitle {
+        font-size: 45px;
+    }
+
+    #aboutContentMain {
+        margin-top: 20px;
+        font-size: 17px;
+    }
+
+    #toolsAndTechTitle {
+        margin-top: 25px;
+        font-size: 20px;
+    }
+
+    .iconContainer {
+        margin-right: 24px;
+    }
+
+    .toolsAndTechIcon {
+        height: 25px;
+        width: 25px;
+    }
+
+    .iconLabel {
+        font-size: 12px;
     }
 }
 

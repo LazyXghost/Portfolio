@@ -8,40 +8,26 @@ import ThirdPage from "./components/ThirdPage.jsx";
 import Footer from "./components/Footer.jsx";
 import RBTVisualiser from "./components/RBTVisualiser.jsx";
 
-let areas = {};
-
 class App extends React.Component {
   componentDidMount() {
     if (window.location.href === 'http://localhost:3000/') {
-      const aboutArea = document.querySelector('#aboutContent').getBoundingClientRect();
-      areas["aboutLabel"] = [aboutArea.y, aboutArea.bottom - 200, 40];
-      const projectArea = document.querySelector('#projectContent').getBoundingClientRect();
-      areas["projectLabel"] = [projectArea.y, projectArea.bottom - 300, 70];
-      // const galleryArea = document.querySelector('#galleryContent').getBoundingClientRect();
-      // areas["galleryLabel"] = [galleryArea.y, galleryArea.bottom - 250, 70];
-
       window.addEventListener('scroll', this.handleScroll, true);
     }
   }
 
-  shiftLabel = (labelClass) => {
-    const windowGap = 40;
-    const label = document.getElementsByClassName(labelClass)[0];
-    const scrollY = document.body.scrollTop;
-    const labelPosMin = areas[labelClass][0];
-    const labelPosMax = areas[labelClass][1];
-    const defaultGap = areas[labelClass][2];
-
-    if (scrollY < labelPosMin - windowGap)
-      label.style.top = (defaultGap).toString() + 'px';
-    else if (scrollY < labelPosMax)
-      label.style.top = ((scrollY - labelPosMin + windowGap) + defaultGap).toString() + 'px';
-  }
-
   handleScroll = () => {
-    this.shiftLabel('aboutLabel');
-    this.shiftLabel('projectLabel');
-    // this.shiftLabel('galleryLabel');
+    let aboutContent = document.querySelector('#aboutContent');
+    let aboutLabel = document.querySelector('.aboutLabel');
+    const topValue = String(aboutContent.getBoundingClientRect().bottom - aboutContent.getBoundingClientRect().top - 60) + "px";
+
+    if (120 - aboutContent.getBoundingClientRect().bottom > 0) {
+      aboutLabel.style.top = topValue;
+      aboutLabel.style.position = "relative";
+    }
+    else {
+      aboutLabel.style.top = "0px";
+      aboutLabel.style.position = "sticky";
+    }
   };
 
   render() {

@@ -2,7 +2,7 @@ import React from "react";
 export default function ThirdPage() {
     return (
         <div className="page fullPage" id="projects">
-            <div className="label projectLabel">Projects</div>
+            <div className="projectLabel">Projects</div>
             <div className="row" id="projectContent">
                 <div className="column">
                     <div className="card">
